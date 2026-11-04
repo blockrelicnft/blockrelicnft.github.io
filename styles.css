@@ -144,3 +144,8 @@ footer{border-top:1px solid var(--gold-dim);margin-top:2rem}
 .foot nav{display:flex;gap:1rem;flex-wrap:wrap}
 .foot a{color:var(--muted);text-decoration:none}
 .foot a:hover{color:var(--gold-bright)}
+.social{display:flex;gap:.8rem;align-items:center}
+.soc{width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--gold-dim);border-radius:50%;color:var(--gold)}
+.soc svg{width:16px;height:16px;fill:currentColor}
+.soc.soon{opacity:.45;cursor:default}
+a.soc:hover{color:var(--gold-bright);border-color:var(--gold)}

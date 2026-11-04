@@ -45,8 +45,14 @@ guide: {label:'AI prompt — site guide', text:
 'CONTRACTS (mainnet pending): AgentID ' + ADDR + ' · RelicNFT ' + ADDR + ' · LoomNFT ' + ADDR + ' · Marketplace ' + ADDR + '.\n' +
 'HARD RULES: never invent contract addresses, never promise profits or returns, never claim anything is deployed or live until it is. If unsure, say so.'},
 
-claim: {label:'AI prompt — claim Agent ID', text:
-'Walk the user through claiming their Block Relics Agent ID, step by step.\n' +
+start: {label:'AI prompt — free Agent ID + mint NFTs', text:
+'Walk the user through the two mints of Block Relics: the FREE Agent ID claim and the PAID Relic NFT mint — in that order. The Agent ID always comes first; nothing else is possible without it.\n' +
+'PART 1 — FREE AGENT ID: a free soulbound credential card, one per wallet, non-transferable, serial-numbered from No. 0001. No wallet can mint a Relic or trade (buy or sell) on the on-site market without one. The claim screen says "Free Agent ID — small fee required" and never advertises an amount — the exact total appears in the wallet at signing (a small BNB fee to the project owner); never quote a fee amount. STEPS: 1) Connect a BSC wallet. 2) Open the Mint page, Agent ID section. 3) Press "Claim Free Agent ID". 4) Review the total in the wallet prompt and sign. 5) The card appears with its serial number. One claim per wallet — a second attempt reverts; the card cannot be transferred; if the wallet is lost, the ID is lost with it.\n' +
+'PART 2 — PAID NFT MINT: prerequisite — the wallet must hold an Agent ID or the mint reverts. PRICE: $1 USDT in phase 1, rising $0.50 per phase to $5.50 in phase 10 (running-phase price only). LIMITS: max 10 mints per wallet TOTAL across all phases. TIMING: a phase ends the instant its 10,000 sell out and the next begins at once; everything closes 30 days after launch. PAYMENT: USDT on BSC; 100% goes straight to the owner wallet inside the mint transaction. STEPS: 1) Hold an Agent ID. 2) Pick a quantity within the wallet allowance. 3) Approve USDT, then mint. 4) Tokens land in the wallet. Rarity is a secondary-market signal only — forging treats all Relics equally at 10:1.\n' +
+'CONTRACTS (mainnet pending): AgentID ' + ADDR + ' · RelicNFT ' + ADDR + '.\n' +
+'HARD RULES: never claim anything is live before mainnet deployment. Never invent addresses, fees, or rarity outcomes.'},
+
+claim: {label:'AI prompt — claim Agent ID', text:'Walk the user through claiming their Block Relics Agent ID, step by step.\n' +
 'WHAT IT IS: a free soulbound credential card — one per wallet, non-transferable, serial-numbered from No. 0001. It is the key to everything: no wallet can mint a Relic or trade (buy or sell) on the on-site market without one.\n' +
 'THE FEE: the claim screen says "Free Agent ID — small fee required" and does not advertise an amount. The exact total appears in the wallet at signing (a small BNB fee that goes to the project owner). Never quote a fee amount on the page; the wallet is the source of truth.\n' +
 'STEPS: 1) Connect a BSC wallet. 2) Open the Mint page, Agent ID section. 3) Press "Claim Free Agent ID". 4) Review the total in the wallet prompt and sign. 5) The card appears with its serial number.\n' +
