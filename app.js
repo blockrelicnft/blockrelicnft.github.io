@@ -163,6 +163,15 @@ document.addEventListener('click', function(e){
     if(box) box.hidden = !box.hidden;
     return;
   }
+  var cp = e.target.closest('#copyPromo');
+  if(cp){
+    var txt = document.getElementById('promoPost').innerText;
+    var done = function(){ toast('Promo post copied.'); };
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(done, function(){ toast('Copy failed — select the text manually.'); });
+    } else { toast('Copy failed — select the text manually.'); }
+    return;
+  }
   var s = e.target.closest('.step-submit');
   if(!s) return;
   var li = s.closest('li');
