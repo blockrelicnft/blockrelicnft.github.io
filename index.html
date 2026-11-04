@@ -191,12 +191,40 @@
   </div>
 
   <div class="panel">
+    <p class="eyebrow">Submit your post link + your wallet — receive a free NFT (1 mint quota + 2 extra sell quota per phase).</p>
     <h3>How it works</h3>
-    <ol class="steps">
-      <li>Submit your X and Telegram links.</li>
-      <li>We verify your follower counts.</li>
-      <li>Publish your promo post.</li>
-      <li>Submit the post link + your wallet — receive a free NFT (1 mint quota + 2 extra sell quota per phase).</li>
+    <ol class="steps submit-steps">
+      <li>
+        <button type="button" class="step-toggle">Submit your X or Telegram Channel link</button>
+        <div class="step-box" hidden>
+          <input type="url" inputmode="url" placeholder="https://x.com/yourhandle  or  https://t.me/yourchannel" aria-label="X or Telegram channel link">
+          <div class="btn-row"><button type="button" class="btn step-submit" data-key="social">Submit</button></div>
+        </div>
+      </li>
+      <li>
+        <button type="button" class="step-toggle">Publish this promo post or your own post with our official link</button>
+        <div class="step-box" hidden>
+          <p class="muted">The official promo post is being finalized — check back soon. Your own post must include our official link: <b>https://blockrelicnft.github.io/#/mint</b></p>
+        </div>
+      </li>
+      <li>
+        <button type="button" class="step-toggle">Submit your post link</button>
+        <div class="step-box" hidden>
+          <input type="url" inputmode="url" placeholder="https://x.com/.../status/...  or  https://t.me/.../..." aria-label="Post link">
+          <div class="btn-row"><button type="button" class="btn step-submit" data-key="post">Submit</button></div>
+        </div>
+      </li>
+      <li>
+        <button type="button" class="step-toggle">Submit your connected Agent wallet address</button>
+        <div class="step-box" hidden>
+          <input type="text" inputmode="text" placeholder="0x..." aria-label="Agent wallet address">
+          <div class="btn-row"><button type="button" class="btn step-submit" data-key="wallet">Submit</button></div>
+        </div>
+      </li>
+      <li class="verify-row">
+        <span>We will verify your participation</span>
+        <span class="pill pending" id="verifyPill">Pending</span>
+      </li>
     </ol>
   </div>
 

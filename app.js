@@ -155,9 +155,34 @@ function buildPrompts(){
   });
 }
 
+/* ---------------- creator submit steps ---------------- */
+document.addEventListener('click', function(e){
+  var t = e.target.closest('.step-toggle');
+  if(t){
+    var box = t.parentElement.querySelector('.step-box');
+    if(box) box.hidden = !box.hidden;
+    return;
+  }
+  var s = e.target.closest('.step-submit');
+  if(!s) return;
+  var li = s.closest('li');
+  var input = li ? li.querySelector('input') : null;
+  var v = input ? (input.value || '').trim() : '';
+  if(!v){ toast('Please paste a value first.'); return; }
+  try{
+    var saved = JSON.parse(localStorage.getItem('br_creator') || '{}');
+    saved[s.getAttribute('data-key')] = v;
+    saved.ts = Date.now();
+    localStorage.setItem('br_creator', JSON.stringify(saved));
+  }catch(err){}
+  input.value = '';
+  var pill = document.getElementById('verifyPill');
+  if(pill){ pill.textContent = 'Pending'; pill.className = 'pill pending'; }
+  toast('Saved on this device. The shared intake form is being connected — your entries are kept here until then.');
+});
+
 /* ---------------- steppers ---------------- */
-function stepper(btnAttr, outId, min, max, onChange){
-  var out = document.getElementById(outId);
+function stepper(btnAttr, outId, min, max, onChange){  var out = document.getElementById(outId);
   if(!out) return;
   var v = parseInt(out.textContent,10) || min;
   document.querySelectorAll('['+btnAttr+']').forEach(function(b){

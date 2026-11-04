@@ -134,6 +134,15 @@ tr.you td{color:var(--gold-bright)}
 .steps{counter-reset:step;margin:1rem 0}
 .steps li{list-style:none;padding:.7rem 0 .7rem 2.6rem;position:relative;border-bottom:1px solid rgba(212,175,55,.12)}
 .steps li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:.7rem;width:1.9rem;height:1.9rem;border-radius:50%;border:1px solid var(--gold);color:var(--gold-bright);display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700}
+.step-toggle{background:none;border:0;color:inherit;font:inherit;text-align:left;cursor:pointer;width:100%;padding:0}
+.step-toggle:hover{color:var(--gold-bright)}
+.step-box{margin-top:.7rem}
+.step-box input{width:100%;background:#0e0e11;border:1px solid var(--gold-dim);border-radius:10px;color:var(--text);padding:.65rem .8rem;font-size:.92rem;font-family:var(--font)}
+.step-box input:focus{outline:none;border-color:var(--gold)}
+.step-box .btn-row{margin-top:.5rem}
+.verify-row{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.pill.pending{border-color:var(--gold-dim);color:var(--muted)}
+.pill.verified{background:#5ac86e;border-color:#5ac86e;color:#0a140c}
 
 /* ---------- toast ---------- */
 #toast{position:fixed;left:50%;bottom:1.4rem;transform:translateX(-50%) translateY(120px);background:#1d1a10;border:1px solid var(--gold);color:var(--gold-bright);padding:.85rem 1.3rem;border-radius:12px;font-size:.9rem;max-width:min(92vw,30rem);text-align:center;z-index:200;transition:transform .3s ease;box-shadow:0 8px 30px rgba(0,0,0,.5)}
