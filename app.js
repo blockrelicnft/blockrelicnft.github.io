@@ -156,6 +156,17 @@ function buildPrompts(){
 }
 
 /* ---------------- creator submit steps ---------------- */
+var CREATOR_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLScOVVdfcACUSwRwajM8jTmtsDQ88Yzs7NMetBm5hjhghS7i_Q/formResponse';
+var CREATOR_FIELDS = { social: 'entry.1426049358', post: 'entry.2079727332', wallet: 'entry.1491587307' };
+function postCreatorForm(data){
+  try{
+    var fd = new FormData();
+    Object.keys(CREATOR_FIELDS).forEach(function(k){
+      if(data[k]) fd.append(CREATOR_FIELDS[k], data[k]);
+    });
+    fetch(CREATOR_FORM_ACTION, { method: 'POST', mode: 'no-cors', body: fd }).catch(function(){});
+  }catch(err){}
+}
 document.addEventListener('click', function(e){
   var t = e.target.closest('.step-toggle');
   if(t){
@@ -183,11 +194,12 @@ document.addEventListener('click', function(e){
     saved[s.getAttribute('data-key')] = v;
     saved.ts = Date.now();
     localStorage.setItem('br_creator', JSON.stringify(saved));
+    postCreatorForm(saved);
   }catch(err){}
   input.value = '';
   var pill = document.getElementById('verifyPill');
   if(pill){ pill.textContent = 'Pending'; pill.className = 'pill pending'; }
-  toast('Saved on this device. The shared intake form is being connected — your entries are kept here until then.');
+  toast('Submitted — your entry was sent. We will verify your participation.');
 });
 
 /* ---------------- steppers ---------------- */
