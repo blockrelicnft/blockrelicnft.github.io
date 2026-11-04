@@ -98,6 +98,7 @@ tr.you td{color:var(--gold-bright)}
 .floor-cell{background:var(--panel);border:1px solid var(--gold-dim);border-radius:var(--radius);padding:1rem;text-align:center}
 .floor-cell b{display:block;font-size:1.5rem;color:var(--gold-bright)}
 .floor-cell span{color:var(--muted);font-size:.8rem}
+.floor-label{display:block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem}
 .hold-banner{background:linear-gradient(160deg,#2a2109,#171106);border:1px solid var(--gold);border-radius:var(--radius);padding:1.2rem;margin:1rem 0;text-align:center}
 .hold-banner .x{font-size:2.2rem;font-weight:800;color:var(--gold-bright);letter-spacing:.04em}
 .hold-banner p{color:var(--muted);font-size:.9rem;max-width:30rem;margin:.4rem auto 0}
