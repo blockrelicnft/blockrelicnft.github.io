@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Block Relics — 100,000 Black-and-Gold Relics on BSC</title>
+<meta name="description" content="Block Relics: 100,000 black-and-gold relic tiles across 10 phases. Forge them into dragon Looms. Trade on our bid-only USDT market.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='6' y='6' width='20' height='20' fill='%230b0b0d' stroke='%23d4af37' stroke-width='2' transform='rotate(45 16 16)'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#/">BLOCK RELICS<small>BSC NFT COLLECTION</small></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#/" data-route="home">Home</a>
+      <a href="#/market" data-route="market">Market</a>
+      <a href="#/mint" data-route="mint">Mint NFTs</a>
+      <a href="#/looms" data-route="looms">Looms</a>
+      <a href="#/creators" data-route="creators">Creator Rewards</a>
+      <a href="#/airdrop" data-route="airdrop">Airdrop</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="app">
+
+<!-- ================= HOME ================= -->
+<section data-page="home">
+  <div class="hero">
+    <p class="eyebrow">Pre-launch · BSC mainnet next</p>
+    <h1>BLOCK RELICS</h1>
+    <p class="tagline">100,000 black-and-gold relics. Forge them into dragon Looms. Trade on our bid-only market.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>$1.00</b><span>Phase 1 mint</span></div>
+    <div class="stat"><b>30 days</b><span>Total mint window</span></div>
+    <div class="stat"><b>100,000</b><span>Supply</span></div>
+    <div class="stat"><b>$2</b><span>Floor</span></div>
+  </div>
+
+  <div class="floor-panel">
+    <span class="big">$2</span>
+    <div><b>minimum per NFT — the floor promise</b><br><span class="muted">Backed by the owner buy wall. Rises $1 every phase to $11.</span></div>
+  </div>
+
+  <div class="hero-art">
+    <img src="assets/relic-concept.webp" alt="Block Relics black-and-gold geometric tile artwork">
+  </div>
+
+  <h2>Ask the guide</h2>
+  <p class="muted">Copy a prompt into your AI assistant and it will walk you through Block Relics.</p>
+  <div class="prompt" data-prompt="guide"></div>
+  <div class="prompt" data-prompt="buy"></div>
+</section>
+
+<!-- ================= MARKET ================= -->
+<section data-page="market" hidden>
+  <p class="eyebrow">Bid-only market</p>
+  <h1>LIVE MARKET</h1>
+  <p class="tagline">No sell listings. Buyers place USDT bids — sellers accept and settle with their own signed transaction.</p>
+
+  <div class="floor-cells">
+    <div class="floor-cell"><b>$2.00</b><span>Phase 1 minimum</span></div>
+    <div class="floor-cell"><b>$11.00</b><span>Phase 10 minimum</span></div>
+  </div>
+
+  <div class="hold-banner">
+    <div class="x">Hold your NFT's till phase-10 and get guaranteed 10× profit</div>
+    <p>Mint at $1.00 in Phase 1, hold to the $11.00 Phase 10 floor — $10.00 profit per Relic.</p>
+  </div>
+
+  <div class="bid-grid">
+    <div class="bid">
+      <p class="eyebrow">Live buy bid · Relic</p>
+      <div class="price">$2.00</div>
+      <p class="note">Relic selling opens after Phase-1 end.</p>
+      <div class="btn-row">
+        <button class="btn ghost" data-coming>Place buy bid</button>
+        <button class="btn" data-coming>Accept &amp; sell</button>
+      </div>
+    </div>
+    <div class="bid">
+      <p class="eyebrow">Live buy bid · Loom</p>
+      <div class="price">$22.00</div>
+      <p class="note">Loom selling opens after Phase 2.</p>
+      <div class="btn-row">
+        <button class="btn ghost" data-coming>Place buy bid</button>
+        <button class="btn" data-coming>Accept &amp; sell</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="chart-wrap">
+    <h3>The floor across all 10 phases <span class="preview-tag">preview</span></h3>
+    <svg id="floorChart" viewBox="0 0 640 300" role="img" aria-label="Bar chart of the buy-wall floor from $2 in phase 1 to $11 in phase 10"></svg>
+    <p class="muted">Owner buy wall: $2 + $1 per phase. Only the owner can bid below the floor.</p>
+  </div>
+
+  <h2>Market AI prompts</h2>
+  <div class="prompt" data-prompt="buy"></div>
+  <div class="prompt" data-prompt="sell"></div>
+</section>
+
+<!-- ================= MINT ================= -->
+<section data-page="mint" hidden>
+  <p class="eyebrow">Mint</p>
+  <h1>MINT NFTS</h1>
+
+  <div class="agent-hero">
+    <img src="assets/agent-id-card.webp" alt="Block Relics Agent ID — black soulbound credential card with gold border">
+  </div>
+  <div class="panel">
+    <h2>YOUR KEY TO THE MINT</h2>
+    <p>The Agent ID is a soulbound credential card — one per wallet, non-transferable, serial-numbered No. 0001 upward. No wallet can mint a single Relic without one, and nobody can buy or sell on the on-site market without one either.</p>
+  </div>
+
+  <div class="panel gold">
+    <h3>Free Agent ID — small fee required</h3>
+    <p class="muted">Exact total shown in your wallet at signing. <span class="preview-tag">preview</span></p>
+    <div class="kv"><span>Claimed</span><b>2,000 / 100,000</b></div>
+    <div class="progress"><i></i></div>
+    <div class="btn-row"><button class="btn" data-coming>Claim Free Agent ID</button></div>
+  </div>
+  <div class="prompt" data-prompt="claim"></div>
+
+  <div class="divider"></div>
+
+  <div class="hero-art">
+    <img src="assets/relic-concept.webp" alt="Block Relics tile artwork">
+  </div>
+  <p>10,000 black-and-gold geometric tiles per phase. Ten phases. Mint price rises $0.50 every phase.</p>
+
+  <div class="panel">
+    <h3><span class="pill live">LIVE</span> Phase 1 <span class="preview-tag">preview</span></h3>
+    <div class="kv"><span>Phase 1</span><b>100 / 10,000</b></div>
+    <div class="kv"><span>Total</span><b>100 / 100,000</b></div>
+    <div class="kv"><span>Mint price</span><b>$1.00 USDT (Phase 1 only)</b></div>
+    <div class="stepper">
+      <button type="button" data-step="-1" aria-label="Decrease quantity">−</button>
+      <b id="mintQty">1</b>
+      <button type="button" data-step="1" aria-label="Increase quantity">+</button>
+      <span class="muted">max 10 per wallet, total</span>
+    </div>
+    <div class="btn-row"><button class="btn" data-coming>Mint</button></div>
+  </div>
+
+  <div class="panel">
+    <h3>Upcoming phases</h3>
+    <p class="muted">+$0.50 per phase</p>
+    <div class="upcoming" id="upcomingPhases"></div>
+  </div>
+  <div class="prompt" data-prompt="mint"></div>
+</section>
+
+<!-- ================= LOOMS ================= -->
+<section data-page="looms" hidden>
+  <p class="eyebrow">Forged</p>
+  <h1>FORGED LOOMS</h1>
+  <div class="hero-art">
+    <img src="assets/loom.webp" alt="Forged dragon Loom — metallic gold center with black dragon">
+  </div>
+  <p>Burn any 10 Relics to forge 1 dragon Loom. Forging unlocks after Phase 1; loom selling opens after Phase 2.</p>
+
+  <div class="panel gold">
+    <h3>Forge a Loom</h3>
+    <div class="kv"><span>Forge fee</span><b>$0.80 USDT → owner</b></div>
+    <div class="stepper">
+      <button type="button" data-forge-step="-1" aria-label="Fewer looms">−</button>
+      <b id="forgeQty">1</b>
+      <button type="button" data-forge-step="1" aria-label="More looms">+</button>
+      <span class="muted" id="forgeRelics">burns 10 Relics</span>
+    </div>
+    <div class="btn-row"><button class="btn" data-coming>Forge</button></div>
+  </div>
+  <div class="prompt" data-prompt="forge"></div>
+</section>
+
+<!-- ================= CREATORS ================= -->
+<section data-page="creators" hidden>
+  <p class="eyebrow">Rewards</p>
+  <h1>CREATOR REWARDS</h1>
+  <p class="tagline">5,000 NFTs reserved for creators who bring the collection to the world.</p>
+
+  <div class="panel">
+    <h3>Eligibility</h3>
+    <p><b>&gt;1,000 X followers AND &gt;30,000 Telegram followers.</b></p>
+  </div>
+
+  <div class="panel">
+    <h3>How it works</h3>
+    <ol class="steps">
+      <li>Submit your X and Telegram links.</li>
+      <li>We verify your follower counts.</li>
+      <li>Publish your promo post.</li>
+      <li>Submit the post link + your wallet — receive a free NFT (1 mint quota + 2 extra sell quota per phase).</li>
+    </ol>
+  </div>
+
+  <div class="floor-panel">
+    <span class="big">10</span>
+    <div><b>looms each for the top 10 creators</b><br><span class="muted">Awarded after all phases end.</span></div>
+  </div>
+  <div class="prompt" data-prompt="creator"></div>
+</section>
+
+<!-- ================= AIRDROP ================= -->
+<section data-page="airdrop" hidden>
+  <p class="eyebrow">Rewards</p>
+  <h1>$100,000 TRADING COMPETITION</h1>
+  <p class="tagline">Trade on the on-site market. Buys and sells both count, credited to both sides. Ranked by volume, paid after the mint ends.</p>
+
+  <div class="floor-cells">
+    <div class="floor-cell"><b>$60,000</b><span>NFT pool · min $1,000 volume</span></div>
+    <div class="floor-cell"><b>$40,000</b><span>Loom pool · min $2,000 volume</span></div>
+  </div>
+
+  <div class="panel">
+    <h3>Leaderboard <span class="preview-tag">preview</span></h3>
+    <div class="tabs" role="tablist">
+      <button class="active" data-lb="nft" role="tab">NFT · $60k</button>
+      <button data-lb="loom" role="tab">Loom · $40k</button>
+    </div>
+    <div class="table-scroll">
+      <table aria-label="Competition leaderboard">
+        <thead><tr><th>#</th><th>Trader</th><th>Volume</th><th>Status</th></tr></thead>
+        <tbody id="lbBody"></tbody>
+        <tbody><tr class="you"><td>—</td><td>Your standing</td><td colspan="2"><button class="btn ghost" data-coming style="padding:.4rem .9rem;font-size:.8rem">Connect wallet to see your standing</button></td></tr></tbody>
+      </table>
+    </div>
+    <p class="muted">Preview rows for illustration. At launch this table reads live on-chain volume from the Marketplace contract.</p>
+  </div>
+  <div class="prompt" data-prompt="competition"></div>
+</section>
+
+</main>
+
+<footer>
+  <div class="foot">
+    <span>© 2026 Block Relics · Pre-launch — mainnet contracts deploy next. Nothing moves funds yet.</span>
+    <nav aria-label="Footer">
+      <a href="#/">Home</a>
+      <a href="#/market">Market</a>
+      <a href="#/mint">Mint NFTs</a>
+      <a href="#/looms">Looms</a>
+      <a href="#/creators">Creator Rewards</a>
+      <a href="#/airdrop">Airdrop</a>
+    </nav>
+  </div>
+</footer>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>
